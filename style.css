@@ -1,0 +1,142 @@
+:root{
+    --primary:rgb(144, 10, 10);
+    --dark: rgb(35, 32, 32);
+    --body: rgb(136, 130, 130);
+    --box-shadow: rgb(255, 249, 249);
+
+}
+
+body{
+    font-family: 'Cambria', 'Times New Roman';
+    min-height: 100vh;
+    line-height: 2;
+    color: var(--body)
+    
+}
+
+.hero-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+   }
+h1,h2,h3,h4,h5,h6,
+.display-4{
+    color: var(--dark);
+}
+
+a{
+    color: var(--dark);
+    text-decoration: none;
+}
+
+.navbar{
+    box-shadow: var(--box-shadow);
+}
+
+.navbar .nav-link{
+font-size: 14px;
+font-weight: 700;
+
+}
+.hero-content{
+    background-image: url(./img/home.jpg);
+    background-position: centre;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 2;
+}
+section{
+    padding-top: 12px;
+    padding-bottom: 120px;
+
+}
+.card-effect{
+    box-shadow: var(--box-shadow);
+    background-color: white;
+    padding: 25px;
+    transition: all 0.35s ease;
+}
+.card-effect:hover{
+box-shadow: none;
+transform: translateY(10px);
+}
+
+.iconbox{
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    background-color: var(--primary);
+    color: white;
+    font-size: 54px;
+    border-radius: 100%;
+}
+.service{
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+.service::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-color: var(--primary);
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.4s;
+}
+.service:hover .iconbox{
+    background-color: whitesmoke;
+    color: var(--primary);
+}
+.service:hover h3,
+.service:hover p{
+    color: whitesmoke;
+}
+.service:hover::after{
+    opacity: 1;
+    top: 0;
+}
+.card .image{
+border-radius: 3px;
+}
+
+form input.form-control{
+    height: 56px;
+   
+}
+form .form-control{
+    border: transparent;
+    border-radius: 0;
+    background-color: whitesmoke;
+}
+
+.footer{
+        position:fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        color: rgb(15, 11, 11);
+        
+}
+.footer-top{
+    
+    padding-bottom: 10px;
+    padding: 2px;
+    background-color: var(--body);
+    background-color: rgb(171, 165, 165);
+}
+
+.footer-top .social-icons{
+    display:inline-block;
+    border-radius: 20px;
+    
+}
